@@ -33,13 +33,11 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
-
         {/* Cabeçalho */}
         <Text style={styles.title}>{APP_TITLE}</Text>
 
         {/* Área de cadastro */}
         <View style={styles.inputRow}>
-
           <TextInput
             style={styles.input}
             placeholder={INPUT_PLACEHOLDER}
@@ -53,7 +51,6 @@ export default function App() {
               onPress={() => {}}
             />
           </View>
-
         </View>
 
         {/* Lista de disciplinas */}
@@ -64,7 +61,6 @@ export default function App() {
             <Text style={styles.itemText}>{item}</Text>
           </View>
         ))}
-
       </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -86,12 +82,13 @@ const styles = StyleSheet.create({
 
   inputRow: {
     flexDirection: 'row',
-
     // Coloca o campo e o botão lado a lado.
-    alignItems: 'center',
 
-    // Distribui o espaço entre o campo e o botão.
+    alignItems: 'center',
+    // Centraliza o input e o botão verticalmente na linha.
+
     justifyContent: 'space-between',
+    // Distribui o espaço entre o input e o botão.
 
     marginBottom: 25,
   },
